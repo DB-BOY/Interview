@@ -5,7 +5,7 @@
 
 	new BitmapTask().execute(ivPic,url);//从这启动AsyncTask
 
-**Handler和线程池的封装**
+**AsyncTask和线程池的封装**
 		
 		class BitmapTask extends AsyncTask<Void,Void,Void>{
 		
