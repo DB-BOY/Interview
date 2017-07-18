@@ -1,5 +1,5 @@
 ## Handler##
-###handler的作用:###
+### handler的作用: ###
 
 1. 主要用于在非UI线程更新UI
 
@@ -7,12 +7,12 @@
 2. 可以通过handler主线程中发送延迟消息
 
 
-###handler源码分析
+### handler源码分析
 
 
    *在子线程创建Handler对象,通过handler发送Message到MessageQueue , looper不断循环 发现有消息就通过handler的handleMessage方法处理消息 返回给主线程更新数据
 
-###首先消息对象是怎么创建的? 
+### 首先消息对象是怎么创建的? 
 是Message.obtain(this)消息自己创建自己,无论带参还是无参的obtain()方法最后还是是由无参的obtain()方法来创建的.
    
 ```
@@ -33,7 +33,7 @@
   sPool是消息池中的第一个消息, 当消息池中有3条消息a b c 时, sPool 指向 a, 就要拿走a, m指向 a,
   当a被拿走的时候,sPool = b , m.next = a 就为null. 然后返回 a . sPool池大小减一.
 
-###Handler的创建
+### Handler的创建
 在new Handler()的时候,一般都用无参的Handler的构造方法,在构造方法中就会获取到一个Looper, 和一个 Message Queue;
 
 ```   
@@ -72,7 +72,7 @@ Looper从sThreadLocal中get出来
  
 
 
-###为什么android设计只能UI线程更新UI
+### 为什么android设计只能UI线程更新UI
 1.解决多线程并发的问题.多个线程更新UI可能发生并发问题,如果在多个线程中加锁,会导致程序页面有可能非常卡顿
 
 2.提高界面更新的性能问题

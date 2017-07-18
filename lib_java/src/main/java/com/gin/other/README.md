@@ -1,4 +1,4 @@
-###1. if else 输出hello world
+### 1. if else 输出hello world
 ```
         if (new Object(){
             {
@@ -11,7 +11,7 @@
         }
 ```
 
-###2. RGB、ARGB比较
+### 2. RGB、ARGB比较
 >ARGB分别是alpha透明度和red、green、blue三色
 
 * ARGB_8888：分别用8位来记录4个值，所以每个像素会占用32位。 

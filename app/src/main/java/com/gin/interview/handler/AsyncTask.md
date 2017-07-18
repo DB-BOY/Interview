@@ -280,7 +280,7 @@ onPostExecute(result)；最后都设置了task的状态为FINISHED。同样的�
 
 	2.3之后的版本 AsyncTask执行的顺序是一个一个往线程池中提交,无论启动多少个任务也不会抛出异常,只有一个任务执行之后才会执行第二个任务
 
-####AsyncTask的任务执行是单线程还是多线程?
+#### AsyncTask的任务执行是单线程还是多线程?
 
 		Android1.6以后更新让AsyncTask获得了并行的能力，但是为了避免因为并行引起的大部分应用程序错误自3.0开始让所有AsyncTask运行在一个单独的线程中，也就是说所有的AsyncTask是串行的
 		如果你真的想要使AsyncTask并行，可以使用：
@@ -288,14 +288,14 @@ onPostExecute(result)；最后都设置了task的状态为FINISHED。同样的�
 		参数传入一个线程池即可，如：
 		ExecutorService pool = Executors.newCachedThreadPool();
 			
-####如何破解AsyncTask的单线程问题
+#### 如何破解AsyncTask的单线程问题
 
 	前提 : AsyncTask做大规模的并发任务的时候
 
 	1:采用线程池
 	2:版本区分,2.3之前用线程池,2.3以后用AsyncTask处理(但是都是单线程处理)
 
-#####什么时候用AsyncTask,什么时候用Thread问题
+##### 什么时候用AsyncTask,什么时候用Thread问题
 
 	AsyncTask的好处
 		简单灵活,减少线程上的交互.不用考虑更新UI的问题

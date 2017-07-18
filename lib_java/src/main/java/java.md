@@ -1,8 +1,6 @@
 * [leetcode](com/gin/leetcode/)
 * [锁](com/gin/lock/锁.md)
 * [观察者模式](com/gin/design/observer/观察者模式.md)
-* [锁](com/gin/lock/锁.md)
-* [锁](com/gin/lock/锁.md)
 * [设计模式](com/gin/design/)
 * [引用类型](com/gin/other/引用.md)
 * [其他总结](com/gin/other/README.md)
