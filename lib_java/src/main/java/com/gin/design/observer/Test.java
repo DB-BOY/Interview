@@ -1,4 +1,4 @@
-package com.gin.observer;
+package com.gin.design.observer;
 
 public class Test {
 	public static void main(String [] args){

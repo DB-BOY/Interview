@@ -1,4 +1,4 @@
-package com.gin.observer;
+package com.gin.design.observer;
 
 public interface Subject {
 public void addObserver(Observer observer);

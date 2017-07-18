@@ -1,10 +1,10 @@
 ## Handler##
 ###handler的作用:###
 
-1.主要用于在非UI线程更新UI
+1. 主要用于在非UI线程更新UI
 
 
-2.可以通过handler主线程中发送延迟消息
+2. 可以通过handler主线程中发送延迟消息
 
 
 ###handler源码分析
