@@ -6,13 +6,14 @@ import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
  * Created by wang.lichen on 2017/7/12.
  */
 
-public class CustomView extends View {
+public class CustomView extends View implements View.OnClickListener, View.OnTouchListener {
 
     public CustomView(Context context) {
         this(context,null);
@@ -121,6 +122,24 @@ public class CustomView extends View {
     }
 
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        Log.i("tag", "----  onTouchEvent ----");
+        return false;
+    }
 
 
+    @Override
+    public void onClick(View v) {
+
+        Log.i("tag", "----  onClick ----");
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+        Log.i("tag", "----  onTouch ----");
+        return true;
+    }
 }
