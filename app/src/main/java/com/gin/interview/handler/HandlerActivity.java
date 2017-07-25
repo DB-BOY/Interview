@@ -31,7 +31,6 @@ public class HandlerActivity extends Activity {
                 childHandler.sendMessage(msg);
             }
         }).start();
-        
     }
 
     class Thread1 extends Thread {
@@ -49,6 +48,7 @@ public class HandlerActivity extends Activity {
             };
             Looper.loop();
         }
+
     }
     
     
