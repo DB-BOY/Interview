@@ -34,6 +34,7 @@ public class Threads2Singleton {
             InternalSingleton singleton = InternalSingleton.getInstance();
             System.out.println(singleton);
             singleton.doSomething();
+            System.out.println(Thread.currentThread().getName());
         }
     }
 }

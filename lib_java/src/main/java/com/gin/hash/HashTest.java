@@ -1,4 +1,4 @@
-package hash;
+package com.gin.hash;
 
 /**
  * Created by wang.lichen on 2017/7/11.

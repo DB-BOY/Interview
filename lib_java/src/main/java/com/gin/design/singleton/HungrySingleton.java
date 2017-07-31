@@ -7,9 +7,11 @@ package com.gin.design.singleton;
 
 public class HungrySingleton {
 
-    private static HungrySingleton singleton=new HungrySingleton();
-    private HungrySingleton(){}
-    public static HungrySingleton getInstance(){
+    private static final HungrySingleton singleton = new HungrySingleton();
+
+    private HungrySingleton() {}
+
+    public static HungrySingleton getInstance() {
         return singleton;
     }
 }
