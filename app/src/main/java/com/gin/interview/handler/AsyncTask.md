@@ -3,8 +3,18 @@
 >
 >内部有两个线程池，默认SERIAL_EXECUTOR 串行线程池， THREAD_POOL_EXECUTOR 并行线程池
 
-1. AsyncTask实际上是对java.util.concurrent包里Executor，Callable，FutureTask以及Handler的一个综合应用，属于简化开发人员流程的一个工具类。
 
+### AsyncTask必须掌握的三个方法
+* doInBackground，必须重写，运行在子线程
+* onPreExecute，运行在主线程，运行时机是doInBackground之前
+* onPostExecute，运行在主线程，运行时机是doInBackground之后
+### execute执行后，异步任务开始工作
+* atask.execute("这是我要对你说的话");
+	* 异步任务开始执行的方法，参数会传给doInBackground
+* doInBackground方法执行完毕有返回值，返回值会传给onPostExecute
+
+
+1. AsyncTask实际上是对java.util.concurrent包里Executor，Callable，FutureTask以及Handler的一个综合应用，属于简化开发人员流程的一个工具类。
 
 	new BitmapTask().execute(ivPic,url);//从这启动AsyncTask
 

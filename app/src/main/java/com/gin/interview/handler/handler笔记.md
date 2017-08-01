@@ -1,8 +1,21 @@
-## Handler##
+## Handler ##
+
+### 按照这个顺序来看
+* 消息对象的创建
+* Handler的创建
+	* 应用启动的时候，主线程（UI线程）会创建并启动
+* Handler发送消息
+	* message对象中有一个long类型记录自己的发送时间
+	
+	* Message队列出消息的顺序由when决定
+
+* Looper分发处理消息
+	* Message对象中有一个Handler类型的成员变量target，这个target是记录此消息对象是由谁创建的
+	* 多个Handler给同一个消息队列发送消息，最终消息由谁处理，取决于消息由谁发送
+
 ### handler的作用: ###
 
 1. 主要用于在非UI线程更新UI
-
 
 2. 可以通过handler主线程中发送延迟消息
 
