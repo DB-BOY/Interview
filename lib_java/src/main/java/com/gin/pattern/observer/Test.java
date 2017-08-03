@@ -1,4 +1,4 @@
-package com.gin.design.observer;
+package com.gin.pattern.observer;
 
 public class Test {
 	public static void main(String [] args){

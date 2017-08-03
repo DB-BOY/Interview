@@ -1,6 +1,6 @@
 package com.gin.thread;
 
-import com.gin.design.singleton.InternalSingleton;
+import com.gin.pattern.singleton.InternalSingleton;
 
 /**
  * Created by wang.lichen on 2017/7/5.

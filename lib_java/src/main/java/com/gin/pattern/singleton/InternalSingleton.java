@@ -1,4 +1,4 @@
-package com.gin.design.singleton;
+package com.gin.pattern.singleton;
 
 /**
  * Created by wang.lichen on 2017/7/5.
@@ -8,15 +8,17 @@ package com.gin.design.singleton;
  */
 
 public class InternalSingleton{
-    private static class SingletonHolder{
-        private final static  InternalSingleton INSTANCE=new InternalSingleton();
-    }
     private InternalSingleton(){}
+
     public static InternalSingleton getInstance(){
         return SingletonHolder.INSTANCE;
     }
-    
+
     public void doSomething(){
         System.out.println("doSomething");
+    }
+
+    private static class SingletonHolder {
+        private final static InternalSingleton INSTANCE = new InternalSingleton();
     }
 }

@@ -1,4 +1,4 @@
-package com.gin.design.observer;
+package com.gin.pattern.observer;
 
 import java.util.ArrayList;
 import java.util.List;

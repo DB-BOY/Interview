@@ -1,4 +1,4 @@
-package com.gin.design.observer;
+package com.gin.pattern.observer;
 
 public class ConcreteObserver implements Observer {
 

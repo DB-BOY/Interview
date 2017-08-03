@@ -1,4 +1,4 @@
-package com.gin.design.singleton;
+package com.gin.pattern.singleton;
 
 /**
  * Created by wang.lichen on 2017/7/5.
