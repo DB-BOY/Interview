@@ -6,4 +6,5 @@
 委托对象跟代理对象需要实现相同的接口。
 
 uml
+
 ![proxy](../pic/proxy.png)
