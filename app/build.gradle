@@ -31,4 +31,5 @@ dependencies {
     compile 'com.zhy:okhttputils:2.6.2'
     compile 'com.zhy:autolayout:1.4.5'
     compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
 }

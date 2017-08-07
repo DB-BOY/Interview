@@ -13,7 +13,7 @@
 2. 同步改异步，利用多线程
 3. 提前或延迟操作
 
-#### 布局优化
+### 布局优化
    
    ``` layout_head.xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -135,11 +135,11 @@
 7. 布局调优工具 hierarchy viewer
  Android studio 中 Tools->Android->Android Device Monitor 
  
-#### 内存优化
+### 内存优化
 
 
 
-#### 代码优化
+### 代码优化
 
 ##### 降低执行时间
    1. 缓存
@@ -181,8 +181,61 @@
 * 首次调用耗时操作，放到初始化中进行，耗时提前
 * 非主要显示的数据，延迟操作，充分使用各种延迟操作的方式，Handler、ScheduledExecutorService、View.postDelayed、AlarmManager等
 
-#### 网络优化
+### 网络优化
+
+1. 直接使用IP，减少DNS解析
+    
+    首次解析域名需要花费几百毫秒的时间，直接使用IP访问，减少解析时间，防止域名劫持
+    
+    弊端：动态IP列表，IP不可用时转域名访问
+    
+2. 缓存图片
 
 
+3. json数据，避免xml，html
 
-#### 数据库优化
+    xml、html需要完整的结束标签，浪费流量，使用json格式的
+
+4. httpTimeOut
+5. gzip压缩
+6. 减少请求次数，请求合并
+7. 请求的Connection是否是keep-alive
+
+    节省连接建立时间，http1.1默认开启
+    
+8. 请求头的cache-control 、 expires是否有缓存
+9. 设置服务器接口响应时间
+10. 重定向次数
+11. 服务器多地部署
+
+
+### 数据库优化
+
+1. 建索引
+    
+   优点: 检索速度加快
+   缺点: 创建维护消耗，索引占用物理空间，数据量越大，消耗空间越大
+
+2. 使用事物
+
+   原子级别的提交，要么都做要么都不做，提交失败，事物回滚，默认为每个插入、更新操作创建事务，但是如果显示的创建事务，会将同一个操作合并到一个事务中，一次性操作，性能得到提升。
+    
+3. 语句优化
+
+   * 不使用select *，返回哪个字段，查那个 
+   * 唯一条件放在前 
+   * 尽量不适用distinct
+   * 使用StringBuffer 代替String
+
+4. 异步
+    
+    异步操作，避免anr
+   
+   
+### [电量篇](http://hukai.me/android-performance-battery/)
+
+### [渲染篇] (http://hukai.me/android-performance-render/)
+ 
+### [运算篇] (http://hukai.me/android-performance-compute/)
+ 
+### [内存篇] (http://hukai.me/android-performance-memory/)
