@@ -9,4 +9,12 @@ public class Constant {
 			89,84,874,3,32,415,8121,471,255,74,851,52,6,126,66
 	};
 
+    public static void print(int[] num) {
+        for (int i = 0, length = num.length; i < length; i++) {
+            System.out.print(num[i] + " ");
+            if (i % 10 == 9)
+                System.out.println();
+        }
+    }
+
 }
